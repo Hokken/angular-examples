@@ -1,0 +1,6 @@
+<h3>{{questionText}}</h3>
+<div [ngSwitch]="questionType">
+<app-quiz-forms-input *ngSwitchCase="'input'" [id]="questionId" [data]="questionControls"></app-quiz-forms-input>
+<app-quiz-forms-radio *ngSwitchCase="'radio'" [id]="questionId" [data]="questionControls"></app-quiz-forms-radio>
+<app-quiz-forms-checkbox *ngSwitchCase="'checkbox'" [id]="questionId" [data]="questionControls"></app-quiz-forms-checkbox>
+</div>

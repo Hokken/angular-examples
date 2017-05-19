@@ -1,0 +1,12 @@
+<form [formGroup]="myForm">
+  <div formArrayName="options" >
+    <div *ngFor="let option of options.controls; let i=index">
+      <label class="center-block">
+      <input [formControlName]="i" [value]="data.options[i].text" type ="checkbox"/>
+        {{data.options[i].text}}
+      </label>
+    </div>
+  </div>
+</form>
+
+

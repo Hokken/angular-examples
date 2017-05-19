@@ -1,0 +1,8 @@
+<div class="card">
+  <div class="card-block">
+    <div class="h5 card-title"><div><strong>{{data.title}}</strong></div></div>
+    <img class="center-block card-img-top img-responsive" [src]="data.urlToImage">
+    <div class="card-text"><p>{{data.description | truncateText:80}}</p></div>
+    <a [href]="data.url" target="_blank" class="btn btn-primary center-block">Go to news</a>
+  </div>
+</div>

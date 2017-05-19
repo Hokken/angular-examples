@@ -1,0 +1,12 @@
+.form-error {
+  color:red;
+}
+.form-registered {
+  color:green;
+}
+
+.vertical-align {
+  display: flex;
+  align-items: center;
+}
+

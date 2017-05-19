@@ -1,0 +1,4 @@
+// check documentation at https://firebase.google.com/docs/web/setup
+// make sure to change the name of that file to firebase-auth.ts
+export const apiKey="ENTER_YOU_API_KEY_HERE";
+export const authDomain="ENTER_YOUR_AUTH_DOMAIN_HERE";

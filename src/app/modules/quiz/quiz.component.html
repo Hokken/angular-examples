@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-12">
+    <hr>
+    <h2>{{qService.quiz.config.name}}</h2>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+    <app-quiz-question [data]="quizCurrentQuestion"></app-quiz-question>
+      </div>
+    </div>
+    <div class="row spacer">
+      <div class="col-md-12 m-2">
+      <app-quiz-controls [buttonState]="buttonState" (prevPressed)="doPrev($event)" (nextPressed)="doNext($event)"></app-quiz-controls>
+      </div>
+    </div>
+    <div class="row spacer">
+      <div class="col-md-12 m-2">
+        <span><strong>Current answers: </strong></span>
+        {{qService.userAnswers.toString()}}
+      </div>
+    </div>
+
+  </div>
+</div>

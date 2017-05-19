@@ -1,0 +1,8 @@
+
+<div [@header-animation]>
+<hr>
+<h2 >{{data.name}}</h2>
+<hr>
+</div>
+<app-news-item *ngFor="let item of data.data" [data]="item"></app-news-item>
+

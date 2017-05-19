@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-sm-12">
+      <hr>
+      <h2>News</h2>
+      <hr>
+        <form [formGroup]="myForm">
+            <span class="input-group">
+                <select (change)="doSelectChange()" formControlName="news" class="form-control">
+                   <option value="" disabled>Select a News Provider</option>
+                   <option class="form-control" *ngFor="let item of news" [ngValue]="item">{{item.name}}</option>
+                </select>
+              <span class="input-group-btn">
+                <button [ngClass]="{'disabled':btnDisabled, remove:bBckg}" class="btn btn-primary" (click)="onAddNews()">{{bText}}</button>
+                <button [ngClass]="{'disabled':btnDisabled}" class="btn btn-danger" (click)="onClearAll()">Remove All</button>
+              </span>
+            </span>
+
+        </form>
+
+        <div class="row">
+            <div class="col-sm-12" >
+                <app-news-set [@set-animation]
+                              (@set-animation.start)="animationStarted($event)"
+                              (@set-animation.done)="animationDone($event)"
+                              *ngFor="let item of
+                              selectedNews"
+                              [data]="item">
+                </app-news-set>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<form [formGroup]="myForm">
+  <div class="form-group radio" *ngFor="let item of data.options; let i = index">
+    <label class="center-block" ><input formControlName="option" [value]="i" type="radio" >{{item.text}}</label>
+  </div>
+</form>
