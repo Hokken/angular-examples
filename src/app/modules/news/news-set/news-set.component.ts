@@ -28,7 +28,7 @@ export class NewsSetComponent implements OnInit, AfterViewInit {
   constructor(/*private cdr: ChangeDetectorRef*/) { }
 
   ngOnInit() {
-      //console.log(this.viewState)
+     //console.log(this.viewState)
   }
 
   ngAfterViewInit() {

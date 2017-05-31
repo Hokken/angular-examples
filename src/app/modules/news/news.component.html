@@ -10,7 +10,7 @@
                    <option class="form-control" *ngFor="let item of news" [ngValue]="item">{{item.name}}</option>
                 </select>
               <span class="input-group-btn">
-                <button [ngClass]="{'disabled':btnDisabled, remove:bBckg}" class="btn btn-primary" (click)="onAddNews()">{{bText}}</button>
+                <button id="add" [ngClass]="{'disabled':btnDisabled, remove:bBckg}" class="btn btn-primary" (click)="onAddNews()">{{bText}}</button>
                 <button [ngClass]="{'disabled':btnDisabled}" class="btn btn-danger" (click)="onClearAll()">Remove All</button>
               </span>
             </span>

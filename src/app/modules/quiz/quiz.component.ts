@@ -21,7 +21,7 @@ export class QuizComponent implements OnInit {
     this.quizCurrentQuestion = this.qService.getCurrentQuestion(this.qPointer);
   }
 
-  doPrev(){
+  doPrev(e){
 
     this.qPointer--;
     this.quizCurrentQuestion = this.qService.quizQuestions[this.qPointer];
@@ -45,7 +45,7 @@ export class QuizComponent implements OnInit {
 
   }
 
-  doNext(){
+  doNext(e){
 
     this.qPointer++;
     this.quizCurrentQuestion = this.qService.getCurrentQuestion(this.qPointer);

@@ -31,7 +31,7 @@ export class QuizFormsInputComponent implements OnInit {
 
     this.myForm.valueChanges.subscribe(
       (data=> {
-        console.log(data);
+        //console.log(data);
           this.qService.userAnswers[this.id] = data.answer
       }
       )

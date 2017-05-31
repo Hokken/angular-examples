@@ -20,7 +20,7 @@ export class QuizService {
     this.userAnswers = [];
 
     this.dataChanged.subscribe(
-      (data=>console.log(data))
+      (data=>{})
     )
   }
 

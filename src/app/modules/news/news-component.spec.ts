@@ -1,5 +1,5 @@
 import {TestBed, async, ComponentFixture, fakeAsync, tick} from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NewsComponent } from "./news.component";
 import { NewsSetComponent } from "./news-set/news-set.component";
 import { NewsItemComponent } from "./news-item/news-item.component";
@@ -42,9 +42,11 @@ describe('NewsComponent', () => {
       ],
 
       imports: [
-      FormsModule,
+      ReactiveFormsModule,
       HttpModule
-      ]
+      ],
+
+      providers:[NewsService]
 
     }).compileComponents();
   }));
@@ -53,14 +55,20 @@ describe('NewsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(NewsComponent);
     component = fixture.componentInstance;
-
     fixture.detectChanges();
+  });
+
+  it('ADD button should be disabled', () => {
+    let el = fixture.debugElement.query(By.css(".disabled"));
+    component.ngOnInit();
+    expect(el.nativeElement).toBeTruthy();
   });
 
 
   it('should find the ADD label', () => {
-    let el:HTMLElement = fixture.debugElement.nativeElement.querySelector("#add");
-    expect(el.textContent).toContain("Add");
+    let el = fixture.debugElement.query(By.css("#add"));
+    component.ngOnInit();
+    expect(el.nativeElement.textContent).toContain("Add");
   });
 
   it('should create component', async(() => {

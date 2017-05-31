@@ -81,7 +81,7 @@ export class NewsComponent implements OnInit  {
     if (isUndefined(objExist)) {
       return false
     } else {
-      //console.log("deleting news set");
+     //console.log("deleting news set");
       return true
     }
   }
@@ -112,11 +112,11 @@ export class NewsComponent implements OnInit  {
         this.selectedNews.unshift(this.myForm.value.news);
         this.btnDisabled = false;
         this.setBtnState();
-        //console.log("news set created");
-       // console.log(this.selectedNews);
+        //////console.log("news set created");
+       ////console.log(this.selectedNews);
       },
       (error:any) => {
-        console.log("There was an error")
+       //console.log("There was an error")
         this.btnDisabled = false;
       }
     )
@@ -132,7 +132,7 @@ export class NewsComponent implements OnInit  {
 
     let indexOfItemToDelete = this.selectedNews.findIndex(el => el ===  this.myForm.value.news)
 
-    //console.log("item to delete = "+ indexOfItemToDelete);
+    //////console.log("item to delete = "+ indexOfItemToDelete);
     this.selectedNews.splice(indexOfItemToDelete,1);
     this.myForm.value.news.data = null;
     this.setBtnState();
@@ -140,7 +140,7 @@ export class NewsComponent implements OnInit  {
     if(this.selectedNews===[]){
      this.setInitialState();
     }
-    //console.log(this.news)
+    //////console.log(this.news)
 
   }
 

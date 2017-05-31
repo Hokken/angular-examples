@@ -26,18 +26,17 @@ export class QuizFormsCheckboxComponent extends QuizFormsBase implements OnInit 
   ngOnInit() {
     this.buildForm();
     //this.myForm.patchValue({options: this.qService.userAnswers[this.id]})
-
   }
 
   buildForm() {
 
     this.myForm = this.fb.group({
       options: this.buildOptions()
-    })
+    });
 
     this.myForm.valueChanges.subscribe(
       (data => {
-          console.log(data);
+          //console.log(data);
           this.qService.userAnswers[this.id] = data.options
         }
       )

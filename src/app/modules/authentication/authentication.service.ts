@@ -23,7 +23,7 @@ export class AuthenticationService {
     this.msg="";
      firebase.auth().createUserWithEmailAndPassword(email,password)
        .then(
-         //response=> console.log(response)
+         //response=> //console.log(response)
          () => this.msg="Account registered, please Log in"
        )
        .catch(
